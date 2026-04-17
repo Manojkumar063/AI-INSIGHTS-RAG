@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  .markdown-body {
+    @apply space-y-4;
+  }
+  .markdown-body p {
+    @apply leading-relaxed;
+  }
+  .markdown-body h1 {
+    @apply text-2xl font-bold mb-4;
+  }
+  .markdown-body h2 {
+    @apply text-xl font-bold mb-3;
+  }
+  .markdown-body ul {
+    @apply list-disc list-inside space-y-1;
+  }
+  .markdown-body ol {
+    @apply list-decimal list-inside space-y-1;
+  }
+  .markdown-body code {
+    @apply bg-stone-100 px-1.5 py-0.5 rounded text-indigo-600 font-mono text-xs;
+  }
+  .markdown-body pre {
+    @apply bg-stone-900 text-stone-100 p-4 rounded-xl overflow-x-auto my-4;
+  }
+  .markdown-body blockquote {
+    @apply border-l-4 border-indigo-200 pl-4 italic text-stone-500;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
